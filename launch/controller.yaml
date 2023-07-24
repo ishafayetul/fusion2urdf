@@ -1,0 +1,27 @@
+robot_test_v23_3_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  jflw_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jflw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jfrw_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jfrw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jrrw_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jrrw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jrlw_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jrlw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  jlidar_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlidar
+    pid: {p: 100.0, i: 0.01, d: 10.0}
